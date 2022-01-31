@@ -59,6 +59,7 @@ class Client(object):
         # r = self.session.get(Client.login_url, proxies=self.proxies, verify=self.verify)
         # r = self.autoresolve(r, debug)
         r = self.get(Client.login_url)
+        r = self.autoresolve(r)
 
         try:
             self.headers = {
@@ -77,7 +78,7 @@ class Client(object):
     def __pull_login_info(self):
         if not exists("login.json") and not self.username and not self.password:
             raise ValueError(
-'The login information are missing!\nPlease provide login info inside of a "login.json" file \
+                'The login information are missing!\nPlease provide login info inside of a "login.json" file \
 or pass the data into the constructor'
             )
         with open("login.json", "r") as file:
@@ -137,10 +138,16 @@ or pass the data into the constructor'
 
     def autoresolve(self, req, debug=0):
         if "SAMLRequest" in req.text:
+            if debug:
+                print("Resolving SAMLRequest...")
             return self.autoresolve(self.resolve_saml_request(req, debug), debug)
         elif "SAMLResponse" in req.text:
+            if debug:
+                print("Resolving SAMLResponse...")
             return self.autoresolve(self.resolve_saml_response(req, debug), debug)
         elif "AuthState" in req.text:
+            if debug:
+                print("Resolving AuthState...")
             return self.autoresolve(self.resolve_auth_state(req, debug), debug)
         return req
 
@@ -149,7 +156,7 @@ or pass the data into the constructor'
             year = str(datetime.now().year)
 
         r = self.session.get(
-            Client.pay_url + "?year=" + year,
+            f"{Client.pay_url}?year={str(year)}",
             headers=self.headers,
             proxies=self.proxies,
             verify=self.verify,
@@ -160,9 +167,8 @@ or pass the data into the constructor'
         else:
             self.paydata = data
 
-    def get(self, url: str):
-        self.autoresolve(self.session.get(url))
-        return self.session.get(url)
+    def get(self, url: str, debug: bool = False):
+        return self.autoresolve(self.session.get(url), debug)
 
     @staticmethod
     def get_contract_pdf_link(data):

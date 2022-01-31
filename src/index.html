@@ -1,0 +1,844 @@
+<!doctype html><html lang="hr" class="h-100"><head><title>Student podaci | ISSP | Srce</title><meta name="charset" content="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="Content-Security-Policy" content="default-src https:"><meta name="application-name" content="SRCE - ISSP & ISAK"><meta name="theme-color" content="#fafafa"><meta name="description" content="Pregled i administracija podataka o statusu studenta - SRCE - Informacijski Sustav Studentskih Prava (ISSP) & Informacijski Sustav Akademskih Kartica (ISAK)"><meta name="robots" content="index, follow"><meta name="googlebot" content="index,follow"><meta name="keywords" content="srce, restoran, studenti, prehrana, subvencija, upisi, godina, prava"><meta name="subject" content="Pregled i administracija podataka o statusu studenta - SRCE - Informacijski Sustav Studentskih Prava (ISSP) & Informacijski Sustav Akademskih Kartica (ISAK)"><link rel="shortcut icon" href="/assets/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"><link rel="manifest" href="/assets/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fafafa"><meta name="application-name" content="issp&isak"><link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/assets/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="issp&isak"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-640x1136.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-750x1334.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-828x1792.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1125x2436.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1242x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1242x2688.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1536x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1668x2224.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1668x2388.png"><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-2048x2732.png"><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1620x2160.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-1136x640.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-1334x750.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-1792x828.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2436x1125.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2208x1242.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2688x1242.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2048x1536.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2224x1668.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2388x1668.png"><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2732x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2160x1620.png"><link rel="icon" type="image/png" sizes="228x228" href="/assets/coast-228x228.png"><meta name="msapplication-TileColor" content="#fafafa"><meta name="msapplication-TileImage" content="/assets/mstile-144x144.png"><meta name="msapplication-config" content="/assets/browserconfig.xml"><link rel="yandex-tableau-widget" href="/assets/yandex-browser-manifest.json"><style>:root{--srce:#C00000;--studenti:#bfc946;--studenti-light:#dfe3a2;--studenti-dark:#63681e;--restorani:#36cccb;--restorani-light:#9ae5e4;--restorani-dark:#1a6666;--administratori:#e78900;--administratori-light:#ffc673;--administratori-dark:#A86500;--podaci:#f04e4e;--podaci-light:#f7a6a6;--podaci-dark:#920c0c}body,html{background-color:#fafafa}body{display:flex;flex-direction:column}main{min-height:calc(100vh - 400px)}.ligth-gray-color{background-color:#e0e0e0;color:#000}#loader{position:absolute;left:50%;top:50%;z-index:1;width:150px;height:150px;margin:-75px 0 0 -75px;border:16px solid #f3f3f3;border-radius:50%;border-top:16px solid var(--srce);width:120px;height:120px;-webkit-animation:spin 1s linear infinite;animation:spin 1s linear infinite}100%{-webkit-transform:rotate(360deg)}100%{transform:rotate(360deg)}.srceLogoHeader{height:55px}.izdvojeno{font-size:1.6rem;font-weight:400;letter-spacing:0;text-transform:uppercase}.bg-studenti{background-color:var(--studenti)}.bg-studenti-light{background-color:var(--studenti-light)}.btn-studenti{background-color:var(--studenti-dark);color:#fff}.btn-studenti-disabled{pointer-events:none}hr.studenti{border-top:2px solid var(--studenti-light)}.studenti-empty{border-bottom:5px solid var(--studenti)}.bg-restorani{background-color:var(--restorani)}.bg-restorani-light{background-color:var(--restorani-light)}.btn-restorani{background-color:var(--restorani-dark);color:#fff}.btn-restorani-disabled{pointer-events:none}hr.restorani{border-top:2px solid var(--restorani-light)}.restorani-empty{border-bottom:5px solid var(--restorani)}.bg-administratori{background-color:var(--administratori)}.bg-administratori-light{background-color:var(--administratori-light)}.btn-administratori{background-color:var(--administratori-dark);color:#fff}.btn-administratori-pocetna{background-color:#885200;color:#fff}.btn-administratori-disabled{pointer-events:none}hr.administratori{border-top:2px solid var(--administratori-light)}.administratori-empty{border-bottom:5px solid var(--administratori)}.bg-podaci{background-color:var(--podaci)}.bg-podaci-light{background-color:var(--podaci-light)}.btn-podaci-active{background-color:var(--podaci-dark)}.btn-podaci-disabled{pointer-events:none!important}hr.podaci{border-top:2px solid var(--podaci-light)}.podaci-empty{border-bottom:5px solid var(--podaci)}.error-empty{border-bottom:5px solid #bdbdbd}.menu-naslovnica{border-bottom:5px solid var(--srce)}.menu-studenti{border-bottom:5px solid #2196f3}.menu-restorani{border-bottom:5px solid #ffc107}.menu-administratori{border-bottom:5px solid #673ab7}.menu-podaci{border-bottom:5px solid #9e9e9e}*{scrollbar-width:thin;scrollbar-color:#fafafa}::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);background-color:#f5f5f5}::-webkit-scrollbar{width:10px;height:10px;background-color:#f5f5f5}::-webkit-scrollbar-thumb{background-color:#fff;border:2px solid #e0e0e0}</style>
+<link href="/vendor/dist/vendor.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="/vendor/dist/vendor.css" rel="stylesheet"></noscript><link href="/WebISSP/dist/WebISSP.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="/WebISSP/dist/WebISSP.css" rel="stylesheet"></noscript>
+<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var t,o=loadCSS.relpreload={};o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},o.support()||(o.poly(),t=n.setInterval(o.poly,500),n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})),"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script></head><body class="h-100"><div id="loader"></div><div id="loaded" style="display:none"><div class="modal fade" id="osnovniModal" tabindex="-1" role="dialog" aria-labelledby="osnovniModalLabel" aria-hidden="true"><div class="modal-dialog modal-md" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title w-100" id="osnovniModalLabel">Molimo Vas potvrdite</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div id="modalOsnovniContent"></div></div></div></div><header class="pt-3">
+    <div class="container p-0 bg-white z-depth-1">
+        <nav class="navbar navbar-expand-lg bg-white z-depth-0 py-3">
+            <a class="skip-main text-white" href="#skipToMain" aria-label="skoči na glavni sadržaj">
+                Skoči na glavni
+                sadržaj
+            </a>
+            <div class="container p-0">
+                    <span class="mr-auto pb-3 d-md-none">
+                        <h1 class="h5 m-0">Podaci o studentskim pravima i akademskim karticama</h1>
+                    </span>
+                    <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon mt-1">☰</span>ISSP & ISAK
+                    </button>
+
+                <!-- <span class="material-icons md-48 pr-2 access-icon">accessibility_new</span> -->
+                <div class="collapse navbar-collapse flex-column align-items-start ml-0" id="navbarCollapse">
+                    <!-- ml-lg-2 ml-0 -->
+                    <span class="h6 mr-auto py-0 font-weight-light">
+                        <p class="p-0 m-0 d-none d-lg-block">
+                            <a class="showLoader" aria-label="Naslovnica" href="/">
+                                <span class="material-icons pb-1 pr-1">home</span>Informacijski
+                                sustav studentskih prava (ISSP) & Informacijski sustav akademskih kartica (ISAK)
+                            </a>
+                        </p>
+                        <p class="pl-5 m-0 d-lg-none">
+                            <a class="showLoader" aria-label="Naslovnica" href="/">
+                                <span class="material-icons pb-1 pr-1">home</span>ISSP &
+                                ISAK
+                            </a>
+                        </p>
+                    </span>
+
+
+                    <ul class="navbar-nav mb-auto mt-0 mr-auto">
+
+                            <!--  -->
+                            <li class="nav-item">
+                                <a class=" pl-5 nav-link showLoader" aria-label="Izlazak iz sustava" href="/account/odjava">
+                                    <span class="material-icons pb-1 pr-1">
+                                        exit_to_app
+                                    </span>Odjava
+                                </a>
+                            </li>
+                        <!--
+                                       <li class="nav-item">
+                                           <a class="nav-link text-danger showLoader" aria-label="Vaši podaci" href="/student">Vaši podaci</a>
+                                       </li>
+
+            -->
+                    </ul>
+                </div>
+                <a href="https://www.srce.unizg.hr/" target="_self" aria-label="srce naslovnica">
+                    <img src="/dist/img/srce-logo-potpis-web.png" class="srceLogoHeader" alt="srce logo header" />
+                </a>
+            </div>
+        </nav>
+    </div>
+</header><main id="skipToMain" class="py-3" tabindex="-1"><div class="container z-depth-1"><div class="row"><div class="col" id="mainDivContent">
+
+
+    
+<div class="row">
+    <div class="py-4 px-3 mb-2 bg-studenti text-dark w-100">
+        <h2 class="p-0 m-0 h5">
+            <a class="showLoader hover-white pr-2" aria-label="Naslovnica" href="/"><span
+                    class="material-icons pr-1 pb-1 md-24">keyboard_arrow_left</span>Naslovnica</a> /
+            <a href="#" class="showLoader hover-white reload"
+                aria-label="Zahtjev za pristup podacima"><span
+                    class="material-icons pr-1 pb-1 md-24">refresh</span>Pregled osobnih podataka</a>
+        </h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 p-0">
+        <div class="card z-depth-0">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-5 col-lg-4">
+                        <div class="row">
+                            <div class="col">
+                                <img src="data:image;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAEsASwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4&#x2B;Tl5ufo6erx8vP09fb3&#x2B;Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3&#x2B;Pn6/9oADAMBAAIRAxEAPwDu6KKWgBKKWjFABRS4ooAKMZopRQAY4op3ejnNACY4paKKADmjqKWkoAKWio5JkjHzMBQBJRWLf&#x2B;I7OwnMLuDIFzgVhTeO1ATZbEk53Zbp6UDSbO2yKAw9a84fx1dsgVY41fv3qVPG7o8YZAV/i55pXQ&#x2B;VnofaiuPi8b2xI3qV9Tmt&#x2B;01i1uwPLlUnHIzTFZmkKKarhuhp9AhKWiigAooooAKKKKACiiigAooooAKKKKACiiigCCjFLS4oAbxS4op2PSgBMGgU6igBMUtLiigAopaKAEopaKAEpCwFRXFwlvE0jkADqa4zVPFUkmY7QbRnG80DSubuseIYNNhY53uOiA81wuseKbu&#x2B;O0ERR9gDzVCaSSaRndy7Mckk1Va3DtzUc3Y0UO5XluZJZC5JZj1JpoSRuSxxV0Wv1xUgh7YqWy0uxmmIjkU8REpuOM1deEDimeTjvxSGU8NnkYxUlveTW77lZgfUGrnkBhkVCYcnAHFF7Ab2neMLy2nBlbzYgoGwnp712Gl&#x2B;K7W9Ko52SE4APevMVtjyfSpIxLC29SQR0I7VSmQ4I9rSRXGVORTq840LxTNbyxxXRJhUY3dx6V39nexXkIkicMp7g1aaZm4tFmiiimSFFGPeloASilooASiloxQAmKKWkoASiloxQBAKdikBpQaYB&#x2B;FFLS0AIBS4opRQAUUUUAFFLRQAhqre3sNnA0szhVUckmpp5VhhaRjgKMmvNdS1SXWLpmBZYM4VM9aTdhpXJNT1u51J3jDssG44HrWWIWPA5rRgtc44q7HaKOcVm3c3jDTQwvsbelKtmcdK6RbdMcinLap6VDaNFBmClqRxg1J9jGM4rd&#x2B;zqB0prW4xxU8xfsznJLcZ61D9nJPtW/JaFu1JHYFjjFFyeQxVtztPGBQLbjgfjXR/2eANuKX&#x2B;zQeKXMPkOeW2wCMcmka2IG2uqi0xepGajm0v5i35UcwuQ5GW2I5XirWk6xNpEpOWMROWWteXTzg8VlXdiQCQKcZakyhoekabqUF/brJE&#x2B;7IBq/Xk2m6tcaVJhG&#x2B;TupFeiaJrEeq2xkQ8qcN9a6E7nNKLRq9TSgUCimSHeilowKAExQRR3paAEwaSl/CigBKKKPxoAhpab0NOxQADpS0UUALRRRQAtFFFMAprNtUnsKdWVr929npjyRAl84GKQHNeJvEBuCbKzk&#x2B;U8SsB&#x2B;grG0&#x2B;33EdgOlUx87lzn5jk1tWKgRjjmpZrGJcVAgAFOHWmmpErNnXFDhUgptOzWbRomOxmlwMUm7FG4VAx2xTThgUwZp9DYD8inKRUWacDSHYtRn3p0hG2q4fjrTWkJouJoH2ntVS5t0eI4FWM5pD3FFyZI4nUIfKmPHGauaHrDaZJsBwjtzz0zVvV7bOSBWB5ZDYNbwkcs4nsdrMs8COrZBGc1YrjPCOr74jazMA6kBfpXZCtk7nO1ZjqSlopiEoopaAE96SlooASjFFHFAEHWloPHejNABS0UvegAooooAWiiimAVx/ja8IhhtYzhpD8x9q68niuA8XTF9WihIIwu760mNbmFEuWxjArdtl2xgD0rNt0ywrWjXatQzogiQU4HFIKcBUHQh2aUZ70KKlUCody0R7TinY4qTHtSYrMoKd2ptLkUDFGaeFJpoPFTIwIyaQDPLI5zTTkVPnio2WgRHTc4NKaZnNIRTv4t61zlxEVc4rq5l3pWNPb/ADE1pBmE4lHS5Fg1SCRyeuAB616vAxaJWPUjNeRXA8p0kJKhWBJXqK9V0qQS6bbSbi26MHJGO1dENjlmi7R2oFLVmYUlFFACZ5pe1JRQAcUfhR3ozQBDyaWm9KWgBaKKKAFFFJS0ALRSUUABrz7xgFTxBbsCCzQkHn0Negk4Fed&#x2B;MsN4ntVU8LbEn6lqGNbkFovfFaQqlZrgAmrtQzqgiRTxTxUWeKBKByTUmyLIwKUHtVI3sYbBNOW8jY8EfnSdhpl7cPWgYzVQTg85p3m1DiUpFo0lQGXio/tFQkO5b3ClEoxjNUvO4qNrkLyTQw5jVWVfWn&#x2B;YCaxBfxjqwFSR6kmeDSaC6NR0z0qsVIJoivVbqamLJIuQRmpC6IapXCYJ96u4wahuFzESKa0ZEloc3egKWU8jqK9J0J9&#x2B;lW7bCo2Dg151eqCCx7Cu&#x2B;8MTNcaHbykggrgY9q6abOSqjazS02jNamAtLSZpM0AL2ozSUlAC0c0lGaAIRS5ptFAD/ejNNzS5oAdQDTc0uaAHUU2loAGrzbxOxfxnMp6JbIF&#x2B;lekH0rzvxYQPGLAD/lyj/maGOKuySzw1uG9elWRVezA&#x2B;ypj0qYnArM64aIRnJ6VUnEpHBGKlaX5qjkmTHJFFizOeOXPWowHByHNWJLmLsQfpVKW6QH7wFZuw7GjFM4HJzVlLg1jRXGT1zWhBl8YpbrQaL4lLcU15MUJE2KZPEwHOal3SGmRPcEd6pzTse9LOxWs&#x2B;WcKfmNZtlEoRpHzkmrkVuwxyRVGCdiMqox6k4q6s7qOJIT/wOrUW1ci6RfiwnWrUcnTBrH&#x2B;1svLrkeqnNTR3AYBkbNJotNM3wwcZFI/MZBqtazFhirJ6GkJmBeAHcK6zwUxPh&#x2B;EHghmBHrz1rkrzq4z1Ndb4IO/wzbuf77r&#x2B;TVvSOWtsdLmikpa3OYKKKSgBaM0lFAC5pKKKAIKKSloAXNLTaKAHUCkzRmgB&#x2B;aTIpM5ooAUniuA8bLs8SWEw/wCWlqUOP9lv/r12epPKmm3LwZMixkrjr7/pXnWpR5iW6B3Ac7j70m7GlODk7mpZj/RVomOFosj/AKHGemVBp0se9ak6Yoxrm6ZW2p1PU&#x2B;lQrKTkQxGaQDlm7VqfYU6kZPvUZgSJiVO00ktRs5W9124RUKOMn7wUfdOadbyT3uQ&#x2B;Pu7uRWjLpVqZGYZBJyQPWpYraOHJRTkjGabcSUpmXbsY7gIeCT0rqLBT8uRWfFZI8obaS1blpAVAzURNNXoXkUYFPlhV4uBSAip48bTms5mygczfQncRXOXKt9p2jJI79hXc3tur8isa4tMHlAcd8VkKUWjAvIfLtY3GX3ZB54B7VkwR3WW3jgf3a63yuMFAR6YqaKMKcrGoPriuiM0lY5nCTd7lOC3l8mPy92SoLbu1TLbzQPvKnB64rRiidj94CrihR8vWsptM1jFohtGyARWkORmq6IucgAVYXpUGjWhz&#x2B;on9&#x2B;F6ZbH1rY0&#x2B;4fS9OEfnGO3hBYLngDqTWfcxB9ZiUj5QjP&#x2B;PH&#x2B;NM1iGS409o1Jwzohx6E1abWxnGKb1PQNLuvt2m291jCypuGR1HrVyoooUtoY7aMYSFBGv0AxUldcb21OGpbmdhaKbS0yAzRmkJooAM0ZpKKAIqKSloAWikooAWiiigBaKSigBa4nV7Vbe4voIwBF95F9MjOPzrtupA9a4TUr0ubycjlpGVR6AHA/lSextRTctAtARYwg9dgzUvUUyA/6JF3O0ZNSAjpUHVFCYHpTGC&#x2B;lTGm7M0N2NVApSLu6LTUtHc8jAq&#x2B;EHcVIBUXDkIYrdI&#x2B;AOamxtprSrH3pFJkOaLhaxMlSgsDwOtQ5I6nFTRSoD83IqJG8bJDGJ3YIqJoQ1WJmjkPyGqX2vypvLfuMg1kDVxH04PyOPpTFsJF960YpUYdasAgehqlLQycUZi2zd6f5AUVdcAg8Yqo/FK5SiNxtp6tzTN1APNIbVkVbkhLsyMQFCck9uakuDFJZSeUcnG4fUVW1SJriyu9p5SMMfcZqrpz/IVJJXbRcimtT0e0n&#x2B;02cE&#x2B;P9ZGGP1xU3equmxmHSrOM9VhUH64q1mu2Hwo82slzuwClpM0Z5qjIKSjmkz70ALmikooAjopKXPegBaKSigBaKKKAFopKKAFrhNeiSLV2gUbY3mB/765P867quN8S2ry6jK4O3G1lJ&#x2B;n/ANalLY2ofGV7bIiaM9Y3K/rUuaaDl92R86An696AcNWZ1x0epKOlOHWmA1IvHNI2Q7oKhkkCinSPVSU5qXoMhEgludp6KM0&#x2B;4vVgGNwH41SkLRSFsE59KxNWhkv18pQxJORSTsritdnRfbmOCTkUxr8jgGsbTtLmsYG3ys2R90ngUOksisoyCe9E72FF62NRdVCzbC43ematXMi3FtvX76fMDXEDSpbW8Ep3Ng9e9dJZSPKmxQT61g9DVbGta3J4zWrHPletYqRFMVehYgYPFMm5eM2ODUbMCKjyDTC2KRaaHE8UJmo91SLwpoRM9iMMFEpI4YYNVdJtWYruBAdwgyOuTVq3UzBmDABTyDWnp6CfVbUL92MF2/Dp&#x2B;pprexEVZXOm4HA6DoKWkBo6V3LRHlSd3cWkoo5pkgTQcUlJQAtGaSgmgCOlyabS0ALS0lLQAUtNpaAFooooAKxtej&#x2B;WGX0JU/j/APqrZrN1yKSXTHMYLNGwfA7gdaCouzOWLHz8gYXpTz1qrJdoqbs8VZPY&#x2B;vNZHodUPBNSZ4qvv5xTi4VST2ouNsWRvWqrSDPWqVzqDSSmKIEsOwpbdZGbMlZt3dkWnbcu&#x2B;WG7Zp6wKvOOakRQBTHnjQcnJ9q0SsG5HKvykVFHbqT0oa7izySKcLqBMfP&#x2B;lZybKUCT7Ar4yKsJbRxLhABUSapbkBT&#x2B;dS&#x2B;arrlTkVky7W3IZWCP1qaF1bvVW4AZaqwzlWIpEuxqyfLz2qAy4p6SiWMiqchINSK9i2jZqVziFjnnFUreTdTtVn&#x2B;zaPcXGDiNQTjsMjNUhSehLLPBYpG0soVZHCDPdj2rpdBiQxvOvcbP615PrusLPYwooL/OJECnlj0H869e8PWEumeHrG1uCTcrCGnJ/vnkj8On4VtShd3OetUsrI06KSiuk4BeaKSigYUZpKKBBRRRQBHQKTvRQA4fWjNJRQA6lpvPrS0ALmiiigAooooAotpGnPP5z2UDSZzkr3rmr1THdzoR91zge2eK7Kub8RR7bmGUYAdSp47ilJaGtObUlcxgcmobyQrCR7VJ0NMmQOuDWR2&#x2B;ZTsIhb2ZncZeU7jn07U0alCHILgH0q&#x2B;0IeNU7AYqr/ZUJclo1P1FQrj3Ks&#x2B;rg/Kj8exqE3r4&#x2B;VJG&#x2B;imtZdNhjOUjUfhUqoE4IrVbFxRzjXznrDKD6bDUL3jKctHIP&#x2B;AGuqzFn7ozQHgJwy5qGjVX6HLLeMxwEc/8BNSpqckByCQPQ11IlgQYSNT9RVaS2jnzlBz7Vi0g1Mb&#x2B;3omGHYA/Wnw36St8ikj1rQOkWwO7yl3fSk&#x2B;wxw8quKWhnIltZMsCOKklGWNRxfK3FSu3WpBDYRg8CtvRIxNqG1wrRiJt6MMhs4GCKxI&#x2B;tdH4bjJluZsfKFWMH9TVw1kjOq7RJrXwjoFnfrfW&#x2B;mQpMhynUqh9QvQGtzPOfWkortPNuLSUUUCFpKKKACiiigAopKM0DI6Wko7UCFo70UUALS0maWgBaKSloAKKKKAErO1q2N1psigZdCHX8P8A61aVNbng0AefFs4I6Gndam1C1NnfyQgfJ95PYHtVYdaykjujLmiSq2GFWFINVBk04MVFSi0yw5A5FVJZc&#x2B;1K0nHWq8jEincsiklIPB61H57A9RQ8bMeBUZgfrzUSd0UpSJ1kY9TVuObFZwBU85qRX5rFj5m9zWWUEc1HK4Iqork8VJtJ5NAXEQ4Y05mph4NIWpEXJozzXX&#x2B;HEC6Qko/5bMz/AK4/pXHxgsCB6V3mnqE061UDAES8fhW1Je8Y15e6WqKKK6jhCiiigAooooASiiigAo4oooAjFFFLQAUUUYoAWjHvRS0ALRSdKWgAooooAKQ0tJQBieI7UNYeei/vY3Xn1B4NcqTzXb6wu7SbjPZc/kRXGXCBTuHepkbUmOXpS4yKgWT5qnDA1B0XIJGESliCR7DNWFhVhmm8Zp/mhBUlpgYFFM8mnGYHvR5wxyazlc0iyu1rupn2XmrnnLimlxjrWYyssO1qkIPY8UpbmmlwKBPQY3y1Fu5zRJJzRAhdx6U0Ztmhax/IW9RxXbWZBsoDj/lmv8q5JMLHgeldZYc2FufWJT&#x2B;la0n7xjW&#x2B;Es0UUV0nIFFFFABRRRQAlFLSUAFFFFAEfel96KKAFFFJmloAXvR3pAaWgBe1FFFABRSZpaACikz6UUAV71fMsbhAM5iYfpXGkB4gfUZruGG4FfUEVxEQxEo9BilI1pbmfKhRsikEpHfFWpkz0qm6HrUG7JfNwOtRvMKruSOlVJZXzxUPQpMuNcYPJqJrs9qz2mIPNRmas5O5aNQXR7mpFuqxvMPY1Ikhz1rJ9yjX&#x2B;000zFqpI2TVlFzzTIbJUBY1oWyKOe9VYE5Bq/FgUwRbUfL&#x2B;FdTpnOmWx/6ZgVy6ngCum0g50qDnoCPyJrSj8RnX&#x2B;Eu0UUV1HGFFFLQAlFFFABRRRQAlFFLQBFS9qSnCgAooFHbpQAd6WkzzSZ5zQApNFJmjNAC96M5pKKAFpabmjNACj7wPvXFOAJplH8Mrj/x412nf8a4qXi6uR/02f/0I0nsaUn7wx6qumTVs81ERzUnQyjJDxmqE0RHSttlzVaWIYqWgRzsiHPSoSDmtp7cc1Ua2Gc1nKJpGRQwasRqepqbyNtWIoh3FYtDuLDEMA9auxw5pIowB0q4gAWiwtxYkCjpU8a4NMT71TCgqxMtdFoj7tNA/uyMP1zXNgmtzQZB5M8X8Qff&#x2B;BFaUn7xlVXuGzRSA0V1nELRRRQAtJRRQAUUUUAJS0lLQBFRSUtAC0ZpuaTNADs0ZpuaM0AOzRmm0UAOopueaXNAC5oyKaTRmgBw6j61xTn/SbnP/AD3f/wBCNdbd3AtLV52/hHyj1PYVx4zyWPzE5Y&#x2B;pPWlLY0pX5rimmHmn55pp6VB0sZzUUg5zzUpqMnigRWdcmoGjGatvVdhSYyHaCfpTlo704da55Ioni&#x2B;tWgflqqnFWVpFIljHrU44qFT2qWkUSVZs7j7NcJKOg4Yeo71UBqSM0J2YmkzrwwIBByCMgindq467vtVtYRNp84bylyYJFBVwO3qDWnpfimx1K3hd2FvI6AlXPAP1rshJSRwVIODN7NLmokkSQbkdXB7qcin7qsgdS0zNG6gB1FJmloAKKO9GaAIaM03NGaAFzRTc0hNADs0ZpmaXNAD6T603OBS5oAdRTCaM5oAdms7U9dsdKjkM0oeZFyIUOWJ7A&#x2B;lc74l8XLBG9npcoabOJJ1PCD0X1PvXnwuCA43EszEsSckn3qoxuB2Gj3l1qscup3szPLNIwVM/LGoOAoFaBPNc/4Wugbae1J&#x2B;aN96j/AGT/APXrezWU07nTT2FoxQDzRUmgwioyKlOKaenSgCBlqJhU7DBqJulKQIhI5pwXmlpwwKyaKHKKmXiolNPUioKROvvUuearAntUgakVcnzT0PNQBuaerYOaAZLcTCG1llY4CISfyrhbe4KQRjOPlrW8TamPKFlGeW5k&#x2B;npXNGX5a6sPF7nLiGtjoNO1q5sJmNvMyZ6jPB/CursfGiMwW9iAHeSP&#x2B;orzmJsLk96kWYg9a6mkzlPaba6gu4RLbyrIh7qelTZrx&#x2B;x1Se0kDxSMh9VNdRYeNJRhLmNZV7sDtaocWFzuc0uazLDWLLUh&#x2B;4lxIOsbcN/9er4NSMlzR&#x2B;NMzS5oAhzSE000UALnijNNJooAXNGaSjtQA6jNNrC8T6rc6XbxC1Kq0pwXIyR9KALGs&#x2B;IrPR1KufNuO0KnkfU9q4LVvFV/qCmN5ikR6xx8L&#x2B;PrWPdSu0jMzFmY5Zickms8sS/JrRRSQFqSUmP&#x2B;lUt22XrjNPlY5xUEhIH0rQlGhYXrWN9HcL0HDL6jvXewyrNEkqHKOMgivMlJPOa6nwvdSsZLYtmJV3KPQ1nVitzWEnsdRSZpO1JXPY6E7oUnNIw460h6UmTSYdSNhUTdKlPeom61LZRHmgE5pe9KAM1nJFD1zin/AFqIE5qSoGPFSLUQqVOlItMfVDVNTTT7fcSDI3Cr/WrMzlIXYdQM1wOoXMs9w0kjZYnFXCHNKxnUnyoSadp5WldizMckmkUkkelVu3Wp16gV6CjZHA5XepbL4A4pm8dqa/Q1FGSR&#x2B;NO&#x2B;gFlZCOlTCcj61WzS&#x2B;1MRq216VIO4hh0wa63TfF80Kql4vnxgY3g/OP8AGvP0PNX4XbpSsmB69ZX9rqEPm2syyKOoHVfqKs5968ghuZ7Sbz7aV4pV5DIcGvS/D1/NqejQ3Vxt81uCVGAazasM/9k="
+                                    alt="Slika studenta" class="slikastud img-thumbnail img-fluid" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="row text-left">
+                                    <div class="col px-5 py-5">
+                                        <a class="font-weight-bold" aria-label="Prikaz računa" href="/student/studentracuni?oib=60909983754">
+                                            <span class="material-icons pr-1">insert_link</span>Prikaz liste osobnih
+                                            računa za period od zadnjih 30
+                                            dana
+                                        </a>
+                                        <p class="text-center text-danger font-weight-bold my-2 d-inline">
+                                            
+                                        </p>
+                                        <div class="py-3"></div>
+                                        <a class="font-weight-bold" aria-label="Prikaz računa PDF" href="/student/generirajpdf?oib=60909983754">
+                                            <span class="material-icons pr-1">get_app</span>Preuzimanje liste svih osobnih
+                                            računa
+                                            (.pdf)
+                                        </a>
+                                        <p class="text-center text-danger font-weight-bold my-2 d-inline">
+                                            
+                                        </p>
+                                        <br />
+                                        <small class="text-muted">
+                                            * Postupak može potrajati do 5 minuta. Molimo Vas za strpljenje.
+                                        </small>
+                                        <div class="py-3"></div>
+                                        <p class="text-center text-danger font-weight-bold my-2 d-inline">
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-7 col-lg-8">
+                        <h2 class="card-title mt-1 font-weight-bold">Borno
+                            Stojak</h2>
+                        <p class="h6"><span class="font-weight-bold">Nadležna ustanova: </span> Fakultet elektrotehnike i ra&#x10D;unarstva, Zagreb</p>
+                        <hr class="studenti" />
+                        <div class="row text-center">
+                            <div class="col-lg-3 col-md-6">
+                                <p class="font-weight-bold text-uppercase h6">Razina prava</p>
+                                    <p class="font-weight-bold text-danger h6"><u>Nepostojanje prava na prehranu</u></p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <p class="font-weight-bold text-uppercase h6">Raspoloživi saldo</p>
+                                <p class="font-weight-bold h5">0,00 Kn</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <p class="font-weight-bold text-uppercase h6">Potrošeno danas</p>
+                                <p class="font-weight-bold h5">0,00 Kn</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <p class="font-weight-bold text-uppercase h6">Dnevna potpora</p>
+                                <p class="font-weight-bold h5">0,00 Kn</p>
+                            </div>
+                        </div>
+                        <hr class="studenti" />
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-md-12">
+                                <p class="text-left line-height-1 mb-0">
+                                    <small>Potpora se dodjeljuje od prvoga do četrnaestog dana te od petnaestoga dana do kraja mjeseca.</small>
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="studenti" />
+                        <div class="row text-left">
+                            <div class="col">
+                                <span class="font-weight-bold">Prebivalište:</span> Kacijan bb, Travnik (BA), 
+                                <br /><span class="font-weight-bold">Boravište:</span> 
+                                <br /><span class="font-weight-bold">Državljanstvo:</span> Hrvatsko
+                                <br /><span class="font-weight-bold text-uppercase">OIB:</span> 60909983754
+                                <br /><span class="font-weight-bold text-uppercase">JMBAG:</span> 0036497227
+                                <br /><span class="font-weight-bold">Europski Studentski Identifikator (ESI): </span>HR:0036497227
+                                <br /><span class="font-weight-bold">Datum rođenja:</span> 30.08.1996
+                                <br /><span class="font-weight-bold">Telefon:</span> 387644220357; 0
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row text-left">
+                            <div class="col">
+                                <span class="font-weight-bold">Prava od datuma:</span> 01.10.2015
+                                <br /><span class="font-weight-bold">Prava do datuma:</span> 15.10.2022
+                                <br /><span class="font-weight-bold">Datum izmjene prava:</span> 15.10.2021. 6:00:34
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row text-left">
+                            <div class="col">
+                                <strong>U slučaju netočno evidentiranih podataka, molimo obratite se u referadu nadležne ustanove.</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+            <section class="mt-5">
+                <div class="card card-cascade narrower z-depth-0">
+                    <div class="view view-cascade bg-studenti-light z-depth-0 narrower py-2 mx-4 mb-3 d-flex align-items-center">
+                        <div></div>
+                        <p class="mx-3 font-weight-bold my-0 pt-2 text-uppercase">
+                            <span class="material-icons pr-1 pb-1 md-24">keyboard_arrow_right</span>Kriterij dodjele prava na
+                            studentski rad
+                        </p>
+                        <div></div>
+                    </div>
+
+                    <div class="px-4">
+                        <div class="table-wrapper">
+                            <div class="table-responsive">
+                                <table class="table-sm table mb-0">
+                                    <caption>Tablica: kriterij dodjele prava na studentski rad</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="font-weight-bold">Naziv</th>
+                                            <th scope="col" class="font-weight-bold text-center">Vrijednost</th>
+                                        </tr>
+                                </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Imate li status studenta? </td>
+                                            <td class="font-weight-bold text-center">DA</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Postoji li zapis o ECTS bodovima u zadnjoj godini studiranja? </td>
+                                            <td class="font-weight-bold text-center">DA</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Upisujete li treći puta prvu godinu studija? </td>
+                                            <td class="font-weight-bold text-center">NE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Studirate li predugo? </td>
+                                            <td class="font-weight-bold text-center">NE</td>
+                                        </tr>
+                                        <tr>
+                                                <td class="font-weight-bold text-success" colspan="2"><u>Ostvarujete pravo na studentski rad</u></td>
+
+                                        </tr>
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+        <section class="mt-5">
+            <div class="card card-cascade narrower z-depth-0">
+                <div
+                    class="view view-cascade bg-studenti-light z-depth-0 narrower py-2 mx-4 mb-3 d-flex align-items-center">
+                    <div></div>
+                    <p class="mx-3 font-weight-bold my-0 pt-2 text-uppercase"><span
+                            class="material-icons pr-1 pb-1 md-24">keyboard_arrow_right</span>Kriterij dodjele prava na
+                        prehranu</p>
+                    <div></div>
+                </div>
+
+                <div class="px-4">
+                    <div class="table-wrapper">
+                        <div class="table-responsive">
+                            <table class="table-sm table mb-0">
+                                <caption>Tablica: kriterij dodjele prava na prehranu</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="font-weight-bold">Naziv</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="text-success text-underline">
+                                        <td class="font-weight-bold">Pravo temeljem redovitog upisa u teku&#x107;u akademsku godinu</td>
+                                    </tr>
+                                    <tr class="text-success text-underline">
+                                        <td class="font-weight-bold">Student sa &#x17E;upanijom prebivali&#x161;ta druga&#x10D;ijom od &#x17E;upanije mjesta studiranja</td>
+                                    </tr>
+                                    <tr class="text-danger text-underline">
+                                        <td class="font-weight-bold">Student koji je stekao manje od 18 ECTS bodova u prethodnoj ak. godini iste razine studija</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+        <section class="mt-5">
+            <div class="card card-cascade narrower z-depth-0">
+                <div
+                    class="view view-cascade bg-studenti-light z-depth-0 narrower py-2 mx-4 mb-3 d-flex align-items-center">
+                    <div></div>
+                    <p class="mx-3 font-weight-bold my-0 pt-2 text-uppercase"><span
+                            class="material-icons pr-1 pb-1 md-24">keyboard_arrow_right</span>Mirovanja</p>
+                    <div></div>
+                </div>
+
+                <div class="px-4">
+                    <div class="table-wrapper">
+                        <div class="table-responsive">
+                            <table class="table-sm table mb-0">
+                                <caption>Tablica: mirovanja</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="font-weight-bold">Naziv ustanove</th>
+                                        <th scope="col" class="font-weight-bold text-right">AkGod</th>
+
+                                        <th scope="col" class="font-weight-bold">
+                                                Studij
+                                        </th>
+
+                                        <th scope="col" class="font-weight-bold text-center">Po&#x10D;etak</th>
+                                        <th scope="col" class="font-weight-bold text-center">Kraj</th>
+                                        <th scope="col" class="font-weight-bold">Napomena</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva, Zagreb</td>
+                                        <td class="text-right">2018</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija                                        </td>
+                                        <td class="text-center">01.10.2018</td>
+                                        <td class="text-center">30.09.2019</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva, Zagreb</td>
+                                        <td class="text-right">2019</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija                                        </td>
+                                        <td class="text-center">01.10.2019</td>
+                                        <td class="text-center">30.09.2020</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+        <section class="mt-5">
+            <div class="card card-cascade narrower z-depth-0">
+                <div
+                    class="view view-cascade bg-studenti-light z-depth-0 narrower py-2 mx-4 mb-3 d-flex align-items-center">
+                    <div></div>
+                    <p class="mx-3 font-weight-bold my-0 pt-2 text-uppercase"><span
+                            class="material-icons pr-1 pb-1 md-24">keyboard_arrow_right</span>Kartice <small>(podcrtani
+                            broj kartice u tablici označava postojanje trenutno aktivne kartice)</small></p>
+                    <div></div>
+                </div>
+
+                <div class="px-4">
+                    <div class="table-wrapper">
+                        <div class="table-responsive">
+                            <table class="table-sm table mb-0">
+                                <caption>Tablica: kartice</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="font-weight-bold text-right">Broj kartice</th>
+                                        <th scope="col" class="font-weight-bold">Naziv ustanove</th>
+                                        <th scope="col" class="font-weight-bold text-center">Ime vlasnika</th>
+                                        <th scope="col" class="font-weight-bold text-center">Status kartice</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="text-success">
+                                        <td class="text-right font-weight-bold text-underline">
+                                            6019831100364972270</td>
+                                        <td class="font-weight-bold">
+                                            Fakultet elektrotehnike i ra&#x10D;unarstva (Zagreb)</td>
+                                        <td class="text-center font-weight-bold">
+                                            Borno Stojak</td>
+                                        <td class="text-center font-weight-bold">
+                                            Izdana</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+        <section class="mt-5">
+            <div class="card card-cascade narrower z-depth-0">
+                <div
+                    class="view view-cascade bg-studenti-light z-depth-0 narrower py-2 mx-4 mb-3 d-flex align-items-center">
+                    <div></div>
+                    <p class="mx-3 font-weight-bold my-0 pt-2 text-uppercase"><span
+                            class="material-icons pr-1 pb-1 md-24">keyboard_arrow_right</span>Upisi godine</p>
+                    <div></div>
+                </div>
+
+                <div class="px-4">
+                    <div class="table-wrapper">
+                        <div class="table-responsive">
+                            <table class="table-sm table mb-0">
+                                <caption>Tablica: upisi godine</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="font-weight-bold">Naziv ustanove</th>
+                                        <th scope="col" class="font-weight-bold text-right">AkGod</th>
+                                        <th scope="col" class="font-weight-bold">
+                                            Studij
+                                        </th>
+                                        <th scope="col" class="font-weight-bold text-center">Godina koju upisuje</th>
+                                        <th scope="col" class="font-weight-bold">Opis upisa</th>
+                                        <th scope="col" class="font-weight-bold text-center">Mirovanje</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva (Zagreb)</td>
+                                        <td class="text-right">2015</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija i Ra&#x10D;unarstvo                                        </td>
+                                        <td class="text-center">1</td>
+                                        <td>upisuje godinu prvi puta (redoviti studij)</td>
+                                        <td class="text-center">Ne</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva (Zagreb)</td>
+                                        <td class="text-right">2016</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija i Ra&#x10D;unarstvo                                        </td>
+                                        <td class="text-center">1</td>
+                                        <td>ponavlja godinu - ra&#x10D;una se (redoviti studij)</td>
+                                        <td class="text-center">Ne</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva (Zagreb)</td>
+                                        <td class="text-right">2017</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija                                        </td>
+                                        <td class="text-center">2</td>
+                                        <td>upisuje godinu prvi puta (redoviti studij)</td>
+                                        <td class="text-center">Ne</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva (Zagreb)</td>
+                                        <td class="text-right">2018</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija                                        </td>
+                                        <td class="text-center">2</td>
+                                        <td>ponavlja godinu - ra&#x10D;una se (redoviti studij)</td>
+                                        <td class="text-center">Obveze</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva (Zagreb)</td>
+                                        <td class="text-right">2019</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija                                        </td>
+                                        <td class="text-center">2</td>
+                                        <td>ponavlja godinu - ra&#x10D;una se (redoviti studij)</td>
+                                        <td class="text-center">Obveze</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva (Zagreb)</td>
+                                        <td class="text-right">2020</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija                                        </td>
+                                        <td class="text-center">3</td>
+                                        <td>upisuje godinu prvi puta (redoviti studij)</td>
+                                        <td class="text-center">Ne</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva (Zagreb)</td>
+                                        <td class="text-right">2021</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija                                        </td>
+                                        <td class="text-center">3</td>
+                                        <td>ponavlja godinu - ra&#x10D;una se (redoviti studij)</td>
+                                        <td class="text-center">Ne</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+        <section class="mt-5">
+            <div class="card card-cascade narrower z-depth-0">
+                <div
+                    class="view view-cascade bg-studenti-light z-depth-0 narrower py-2 mx-4 mb-3 d-flex align-items-center">
+                    <div></div>
+                    <p class="mx-3 font-weight-bold my-0 pt-2 text-uppercase"><span
+                            class="material-icons pr-1 pb-1 md-24">keyboard_arrow_right</span>ECTS bodovi</p>
+                    <div></div>
+                </div>
+
+                <div class="px-4">
+                    <div class="table-wrapper">
+                        <div class="table-responsive">
+                            <table class="table-sm table mb-0">
+                                <caption>Tablica: ECTS bodovi</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="font-weight-bold">Naziv ustanove</th>
+                                        <th scope="col" class="font-weight-bold text-right">AkGod</th>
+                                        <th scope="col" class="font-weight-bold">
+                                            Studij
+                                        </th>
+                                        <th scope="col" class="font-weight-bold">Razina studija</th>
+                                        <th scope="col" class="font-weight-bold text-right">Bodovi</th>
+                                        <th scope="col" class="font-weight-bold text-center">Datum izra&#x10D;una</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva, Zagreb</td>
+                                        <td class="text-right">2015</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija i Ra&#x10D;unarstvo                                        </td>
+                                        <td>preddiplomski (Sveu&#x10D;ili&#x161;ni studij)</td>
+                                        <td class="text-right">47,00</td>
+                                        <td class="text-center">09.11.2017</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva, Zagreb</td>
+                                        <td class="text-right">2016</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija i Ra&#x10D;unarstvo                                        </td>
+                                        <td>preddiplomski (Sveu&#x10D;ili&#x161;ni studij)</td>
+                                        <td class="text-right">33,00</td>
+                                        <td class="text-center">09.11.2017</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva, Zagreb</td>
+                                        <td class="text-right">2017</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija                                        </td>
+                                        <td>preddiplomski (Sveu&#x10D;ili&#x161;ni studij)</td>
+                                        <td class="text-right">12,00</td>
+                                        <td class="text-center">12.09.2018</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva, Zagreb</td>
+                                        <td class="text-right">2018</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija                                        </td>
+                                        <td>preddiplomski (Sveu&#x10D;ili&#x161;ni studij)</td>
+                                        <td class="text-right">7,00</td>
+                                        <td class="text-center">15.06.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva, Zagreb</td>
+                                        <td class="text-right">2019</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija                                        </td>
+                                        <td>preddiplomski (Sveu&#x10D;ili&#x161;ni studij)</td>
+                                        <td class="text-right">17,00</td>
+                                        <td class="text-center">10.07.2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fakultet elektrotehnike i ra&#x10D;unarstva, Zagreb</td>
+                                        <td class="text-right">2020</td>
+                                        <td>
+Elektrotehnika i informacijska tehnologija                                        </td>
+                                        <td>preddiplomski (Sveu&#x10D;ili&#x161;ni studij)</td>
+                                        <td class="text-right">17,00</td>
+                                        <td class="text-center">02.07.2021</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12 p-0 bg-white">
+        <section class="mt-5">
+            <div class="card card-cascade narrower z-depth-0">
+                <div
+                    class="view view-cascade bg-studenti-light z-depth-0 narrower py-2 mx-4 mb-3 d-flex align-items-center">
+                    <div></div>
+                    <p class="mx-3 font-weight-bold my-0 pt-2 text-uppercase"><span
+                            class="material-icons pr-1 pb-1 md-24">keyboard_arrow_right</span>Vlasnik u visokom učilištu
+                        <small>(podcrtani matbr ustanove u tablici označava nadležnu ustanovu)</small>
+                    </p>
+                    <div></div>
+                </div>
+
+                <div class="px-4">
+                    <div class="table-wrapper">
+                        <div class="table-responsive">
+                            <table class="table-sm table mb-0">
+                                <caption>Tablica: vlasnik u visokom učilištu</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="font-weight-bold">Naziv ustanove</th>
+                                        <th scope="col" class="font-weight-bold text-center">Datum ispisa</th>
+                                        <th scope="col" class="font-weight-bold text-center">Opis razloga</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class=" text-success">
+                                        <td class=" font-weight-bold">
+                                            Fakultet elektrotehnike i ra&#x10D;unarstva</td>
+                                        <td class="text-center  font-weight-bold">
+                                            </td>
+                                        <td class="text-center  font-weight-bold">
+                                            </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="studenti-empty pt-2"></div>
+            </div>
+        </section>
+    </div>
+</div>
+</div></div></div></main><footer class="font-small font-weight-bold pb-3">
+    <div class="container bg-white pt-5 pb-2 z-depth-1">
+        <div class="row">
+            <div class="col">
+                <a href="#" class="arrow-up" aria-label="Povratak na vrh">
+                    <span class="material-icons pr-1 pb-1">expand_less</span>Povratak na vrh
+                </a>
+                <span class="px-3"></span>
+                <a class="showLoader" aria-label="Naslovnica" href="/">
+                    <span class="material-icons pr-1 pb-1">home</span>Naslovnica
+                </a>
+                    <span class="px-3"></span>
+                    <a class="showLoader" aria-label="Izlazak iz sustava" href="/account/odjava">
+                        <span class="material-icons pb-1 pr-1">
+                            exit_to_app
+                        </span>Odjava
+                    </a>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <strong class="text-uppercase h6 pb-3 font-weight-light">Službeni dokumenti</strong>
+                <ul>
+                    <li class="text-truncate">
+                        <a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2014_07_90_1830.html"
+                           target="_blank" rel="noopener" aria-label="Pravilnik o studenskoj ispravi (Narodne novine, broj 90/2014)">
+                            <span class="material-icons pr-1">open_in_new</span>Pravilnik o studenskoj ispravi (Narodne novine, broj 90/2014)
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2013_09_120_2586.html" target="_blank"
+                           rel="noopener"
+                           aria-label="Pravilnik o uvjetima i načinu ostvarivanja prava na pokriće troškova prehrane studenata (Narodne novine, broj 120/2013)">
+                            <span class="material-icons pr-1">open_in_new</span>Pravilnik o uvjetima i načinu ostvarivanja prava na pokriće troškova prehrane studenata (Narodne novine, broj 120/2013)
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2014_01_8_140.html" target="_blank"
+                           rel="noopener" aria-label="Pravilnik o izmjenama Pravilnika o uvjetima i načinu ostvarivanja prava na pokriće troškova prehrane studenata (Narodne novine, broj 8/2014)">
+                            <span class="material-icons pr-1">open_in_new</span>Pravilnik o izmjenama Pravilnika o uvjetima i načinu ostvarivanja prava na pokriće troškova prehrane studenata (Narodne novine, broj 8/2014)
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2019_06_63_1249.html" target="_blank"
+                           rel="noopener" aria-label="Pravilnik o uvjetima i načinu ostvarivanja prava redovitih studenata na subvencionirano stanovanje (Narodne novine, broj 63/2019)">
+                            <span class="material-icons pr-1">open_in_new</span>Pravilnik o uvjetima i načinu ostvarivanja prava redovitih studenata na subvencionirano stanovanje (Narodne novine, broj 63/2019)
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2018_10_96_1851.html" target="_blank"
+                           rel="noopener" aria-label="Zakon o obavljanju studentskih poslova (Narodne novine, broj 96/2018)">
+                            <span class="material-icons pr-1">open_in_new</span>Zakon o obavljanju studentskih poslova (Narodne novine, broj 96/2018)
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2020_02_16_329.html" target="_blank"
+                           rel="noopener" aria-label="Zakon o izmjeni Zakona o obavljanju studentskih poslova (Narodne novine, broj 16/2020)">
+                            <span class="material-icons pr-1">open_in_new</span>Zakon o izmjeni Zakona o obavljanju studentskih poslova (Narodne novine, broj 16/2020)
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2015_02_23_492.html" target="_blank"
+                           rel="noopener" aria-label="Pravilnik o uvjetima i načinu ostvarivanja prava na novčanu potporu za podmirenje dijela troškova prijevoza za redovite studente s invaliditetom (Narodne novine, broj 23/2015)">
+                            <span class="material-icons pr-1">open_in_new</span>Pravilnik o uvjetima i načinu ostvarivanja prava na novčanu potporu za podmirenje dijela troškova prijevoza za redovite studente s invaliditetom (Narodne novine, broj 23/2015)
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2021_09_102_1827.html" target="_blank"
+                           rel="noopener" aria-label="Pravilnik o uvjetima i načinu ostvarivanja prava redovitih studenata na državnu stipendiju u STEM područjima znanosti (Narodne novine, broj 102/2021)">
+                            <span class="material-icons pr-1">open_in_new</span>Pravilnik o uvjetima i načinu ostvarivanja prava redovitih studenata na državnu stipendiju u STEM područjima znanosti (Narodne novine, broj 102/2021)
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2021_09_106_1861.html" target="_blank"
+                           rel="noopener" aria-label="Pravilnik o uvjetima i načinu ostvarivanja prava na državnu stipendiju na temelju socio-ekonomskoga statusa (Narodne novine, broj 106/2021)">
+                            <span class="material-icons pr-1">open_in_new</span>Pravilnik o uvjetima i načinu ostvarivanja prava na državnu stipendiju na temelju socio-ekonomskoga statusa (Narodne novine, broj 106/2021)
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2019_08_74_1579.html" target="_blank"
+                           rel="noopener" aria-label="Pravilnik o uvjetima i načinu ostvarivanja prava na državnu stipendiju za posebne skupine studenata (Narodne novine, broj 74/2019)">
+                            <span class="material-icons pr-1">open_in_new</span>Pravilnik o uvjetima i načinu ostvarivanja prava na državnu stipendiju za posebne skupine studenata (Narodne novine, broj 74/2019)
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2007_07_71_2182.html" target="_blank"
+                           rel="noopener" aria-label="Zakon o studentskom zboru i drugim studentskim organizacijama (Narodne novine, broj 71/2007)">
+                            <span class="material-icons pr-1">open_in_new</span>Zakon o studentskom zboru i drugim studentskim organizacijama (Narodne novine, broj 71/2007)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-5">
+                <strong class="text-uppercase h6 pb-3 font-weight-light">Poveznice</strong>
+                <ul>
+                    <li class="text-truncate">
+                        <a href="http://www.srce.hr/issp/" target="_blank" rel="noopener" aria-label="ISSP stranice">
+                            <span class="material-icons pr-1">open_in_new</span>ISSP - Informacijski Sustav Studentskih
+                            Prava
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="http://www.srce.hr/isak/" target="_blank" rel="noopener" aria-label="ISAK stranice">
+                            <span class="material-icons pr-1">open_in_new</span>ISAK - Informacijski Sustav Akademskih
+                            Kartica
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://moj.aaiedu.hr/moji-podaci" target="_blank" rel="noopener"
+                           aria-label="Moj AAI@EduHr">
+                            <span class="material-icons pr-1">open_in_new</span>MojAAI@EduHr - Moji podaci iz LDAP
+                            imenika matične ustanove
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a href="https://issp.srce.hr/e-potvrda/" target="_blank" rel="noopener" aria-label="e-potvrda">
+                            <span class="material-icons pr-1">open_in_new</span>e-Zapis o statusu studenta
+                        </a>
+                    </li>
+                    <li class="text-truncate">
+                        <a aria-label="izjava o pristupačnosti" href="/home/izjavaopristupacnosti">
+                            <span class="material-icons pr-1">open_in_new</span>Izjava o pristupačnosti
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-12 col-lg-3">
+                <strong class="text-uppercase h6 pb-3 font-weight-light">Kontakt</strong>
+                <ul>
+                    <li>
+                        <span>E-pošta:</span> <a href="mailto:issp@srce.hr" title="ISSP upit sa weba"
+                                                 aria-label="Pošalji email">issp@srce.hr</a>
+                    </li>
+                    <li><span>Telefon: +385 1 616 5165</span></li>
+                    <li><span>Fax: +385 1 616 5559</span></li>
+
+                </ul>
+            </div>
+            <div class="col-md-12 col-lg-4 text-center">
+                <img src="/dist/img/Logo_potpis_adresa.gif?v1" class="srceLogoFooterBig img-fluid .py-md-2 .py-lg-0" alt="srce logo" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="/dist/img/footer-image.png?v1" class="img-fluid" alt="srce logo footer slika" />
+            </div>
+        </div>
+        <div class="row text-center pt-3 pb-2">
+            <div class="col">
+                ISSP & ISAK
+            </div>
+        </div>
+    </div>
+</footer></div><script src="/runtime/dist/runtime.js" charset="utf-8" type="text/javascript"></script><script src="/vendor/dist/vendor.js" charset="utf-8" type="text/javascript"></script><script src="/WebISSP/dist/WebISSP.js" charset="utf-8" type="text/javascript"></script></body></html>
