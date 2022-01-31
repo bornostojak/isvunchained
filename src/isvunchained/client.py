@@ -151,9 +151,25 @@ or pass the data into the constructor'
             return self.autoresolve(self.resolve_auth_state(req, debug), debug)
         return req
 
-    def fetch_pay_data(self, year: int = None, inplace: bool = False):
+    def fetch_pay_data(self, year: str = None, inplace: bool = False):
+        if '-' in str(year):
+            st,ed = year.split('-')[:2]
+            try:
+                st = int(st)
+                ed = datetime.now().year if not ed else int(ed) 
+                
+                if st>=ed: raise Exception("MN")
+                
+                return [dt for yr in range(st, ed+1)[::-1] for dt in self.fetch_pay_data(yr)]
+            except Exception as e:
+                print(self.fetch_pay_data(st))
+                return
+            
+            print("Format year with [lower year]-[*higher year or empty]")
+            return return_data
         if not year:
             year = str(datetime.now().year)
+        
 
         r = self.session.get(
             f"{Client.pay_url}?year={str(year)}",
@@ -198,6 +214,7 @@ or pass the data into the constructor'
                 ]:
                     if d[t]:
                         try:
-                            d[t] = datetime.fromisoformat(d[t])
-                        except Exception:
-                            d[t] = datetime.fromisoformat(txt_date.sub(r"\1", d[t]))
+                            if type(d[t]) is datetime: return
+                            d[t] = datetime.fromisoformat(d[t].split('.')[0])
+                        except Exception as e:
+                            d[t] = datetime.fromisoformat(txt_date.sub(r"\1", d[t].split('.')[0])) #if '.' in d[t] else ))

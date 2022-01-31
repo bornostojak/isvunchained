@@ -23,7 +23,7 @@ parser.add_argument(
     type=str,
     help="The password for the account",
 )
-parser.add_argument("-y", "--year", metavar="YEAR", type=int, help="The year")
+parser.add_argument("-y", "--year", metavar="YEAR", type=str, help="The year")
 parser.add_argument(
     "-o", "--options", metavar="OPTIONS", type=str, help="Aditional options"
 )
@@ -54,8 +54,11 @@ def main(username: str = None, password: str = None, autologin: bool = True):
     else:
         c = Client(autologin=True)
 
+    fetched_data = c.fetch_pay_data(args.year)
+    if not fetched_data:
+        exit(1)
     data = {
-        "data": c.fetch_pay_data(args.year),
+        "data": fetched_data,
         "username": username,
         "password": password,
         "year": args.year,
@@ -113,8 +116,10 @@ def process_options(current_option, data, username, password, year):
 
     export_data = [*data]
 
-    if "convert" == current_option:
-        Client.convert(export_data)
+    if "raw" == current_option or "sirovo" == current_option:
+        print(data)
+
+    Client.convert(export_data)
     if "pay" == current_option:
         temp_data = [*data]
         Client.convert(temp_data)
@@ -139,5 +144,3 @@ def process_options(current_option, data, username, password, year):
             f"Prirez: {round(sum([each['Prirez'] for each in export_data if each['Prirez']]),2)} kn"
         )
 
-    if "raw" == current_option or "sirovo" == current_option:
-        print(data)
