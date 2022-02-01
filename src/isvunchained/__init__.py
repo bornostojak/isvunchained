@@ -25,10 +25,17 @@ parser.add_argument(
 )
 parser.add_argument("-y", "--year", metavar="YEAR", type=str, help="The year")
 parser.add_argument(
-    "-o", "--options", metavar="OPTIONS", type=str, help="Aditional options"
+    "-o", 
+    "--options", 
+    metavar="OPTIONS", 
+    type=str, 
+    help="Aditional options [latest, last_paid, total, raw, iksica, pdf, pay]"
 )
 parser.add_argument(
     "-n", "--neat", action="store_true", help="Print neatly separated values"
+)
+parser.add_argument(
+    "-P", "--pretty", action="store_true", help="Print pretty output"
 )
 
 
@@ -59,51 +66,34 @@ def main(username: str = None, password: str = None, autologin: bool = True):
         exit(1)
     data = {
         "data": fetched_data,
-        "username": username,
-        "password": password,
-        "year": args.year,
+        "client": c,
+        "args": args
     }
     
     for option in args.options[:-1]:
-        process_options(option, **data)
         neat(option)
+        process_options(option, **data)
+
+    neat(args.options[-1])
     process_options(args.options[-1], **data)
 
 
-def process_options(current_option, data, username, password, year):
+def process_options(current_option, data, client, args):
     if "iksica" == current_option:
-        try:
-            filepath = os.path.join(
-                os.path.dirname(os.path.dirname(__file__)), "login.json"
-            )
-            if os.path.exists(filepath):
-                with open(
-                    filepath,
-                    "r",
-                ) as file:
-                    login = json.loads(file.read())
-            else:
-                login = {"username": username, "password": password, "autologin": 0}
+        page = client.get(
+            "https://issp.srce.hr/account/loginaai", debug="debug" == current_option
+        ).text
+        bs = BS(page, "html.parser")
 
-            cl = Client(**login)
-            page = cl.get(
-                "https://issp.srce.hr/account/loginaai", debug="debug" == current_option
-            ).text
-            bs = BS(page, "html.parser")
-
-            stanje = {}
-            for s in ["Razina prava", "Raspoloživi saldo", "Potrošeno danas"]:
-                stanje[s] = [*bs.find(text=s).parent.parent.children][-2].text
-            # os.system(
-            #'notify-send "Stanje na iksici:" "{}"'.format(
-            # "\n".join([k + ": " + stanje[k] for k in stanje.keys()])
-            # )
-            # )
-            print("\n".join([f"{k}: {v}" for k, v in stanje.items()]))
-        except IndexError:
-            pass
-        finally:
-            del cl
+        stanje = {}
+        for s in ["Razina prava", "Raspoloživi saldo", "Potrošeno danas"]:
+            stanje[s] = [*bs.find(text=s).parent.parent.children][-2].text
+        # os.system(
+        #'notify-send "Stanje na iksici:" "{}"'.format(
+        # "\n".join([k + ": " + stanje[k] for k in stanje.keys()])
+        # )
+        # )
+        print("\n".join([f"{k}: {v}" for k, v in stanje.items()]))
 
     if "pdf" == current_option:
         pdf_links = []
@@ -144,3 +134,34 @@ def process_options(current_option, data, username, password, year):
             f"Prirez: {round(sum([each['Prirez'] for each in export_data if each['Prirez']]),2)} kn"
         )
 
+    if current_option == "last_paid":
+        srt = sorted(
+            [g for g in client.fetch_pay_data(args.year) if g['UgovorIsplacen']],
+            key= lambda x: x['DatumIsplate'], 
+            reverse=True
+            )
+        format_raw(srt[0], args.pretty)
+
+    if current_option == "latest":
+        srt = list(sorted(
+            [g for g in client.fetch_pay_data(args.year) if g['RacunDatum']],
+            key= lambda x: x['RacunDatum'], 
+            reverse=True
+            ))
+        format_raw(srt[0], args.pretty)
+
+
+def format_raw(raw_data, pretty):
+    if not pretty:
+        print(raw_data)
+        return
+    
+    if type(raw_data) is dict:
+        raw_data=[raw_data]
+    length = max([len(k) for k in raw_data[0].keys()])+3
+    
+    print("\n".join([
+        f"Ugovor: {ugovor['UgovorBroj']}\n"+
+        "\n".join([f" {k}{'.'*(length-len(k))} {v}" for k,v in ugovor.items() if k != "UgovorBroj"])+
+        "\n"
+        for ugovor in raw_data]))

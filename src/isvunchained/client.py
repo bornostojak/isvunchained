@@ -26,10 +26,16 @@ class Client(object):
     The scraper client used to connect to tje ISVU server and log in.
     """
 
-    login_url = "https://natjecaj.sczg.hr/student/login.ashx"
+    login_url = natjecaj_url = "https://natjecaj.sczg.hr/student/login.ashx"
+    issp_url = "https://issp.srce.hr/account/loginaai"
     loginuserpass_url = "https://login.aaiedu.hr/sso/module.php/core/loginuserpass.php?"
     pay_url = "https://natjecaj.sczg.hr/SCSmjestaj/api/Student/UgovoriDetaljByYear"
     contract_pdf_url = "https://natjecaj.sczg.hr/SCSmjestaj/api/pdf/Ugovor"
+
+    login_pages={
+        'natjecaj.sczg.hr': natjecaj_url,
+        'issp.srce.hr': issp_url
+    }
 
     def __init__(
         self,
@@ -59,17 +65,9 @@ class Client(object):
         # r = self.session.get(Client.login_url, proxies=self.proxies, verify=self.verify)
         # r = self.autoresolve(r, debug)
         r = self.get(Client.login_url)
-        r = self.autoresolve(r)
 
         try:
-            self.headers = {
-                "Authorization": "Bearer "
-                + str(
-                    auth_re.sub(
-                        r"\1", [t for t in r.text.split("\n") if "SCLS-Token" in t][0]
-                    )
-                )
-            }
+            r = self.autoresolve(r)
         except Exception:
             raise ValueError("ERROR =>>  Could not grab the Authorization token!")
 
@@ -149,6 +147,15 @@ or pass the data into the constructor'
             if debug:
                 print("Resolving AuthState...")
             return self.autoresolve(self.resolve_auth_state(req, debug), debug)
+        if "SCLS-Token" in req.text and (not self.headers or "Authorization" not in self.headers):
+            self.headers = {
+                "Authorization": "Bearer "
+                + str(
+                    auth_re.sub(
+                        r"\1", [t for t in req.text.split("\n") if "SCLS-Token" in t][0]
+                    )
+                )
+            }
         return req
 
     def fetch_pay_data(self, year: str = None, inplace: bool = False):
@@ -162,7 +169,6 @@ or pass the data into the constructor'
                 
                 return [dt for yr in range(st, ed+1)[::-1] for dt in self.fetch_pay_data(yr)]
             except Exception as e:
-                print(self.fetch_pay_data(st))
                 return
             
             print("Format year with [lower year]-[*higher year or empty]")
@@ -171,12 +177,10 @@ or pass the data into the constructor'
             year = str(datetime.now().year)
         
 
-        r = self.session.get(
-            f"{Client.pay_url}?year={str(year)}",
-            headers=self.headers,
-            proxies=self.proxies,
-            verify=self.verify,
-        )
+        if 'natjecaj.sczg.hr' not in {cookie.domain for cookie in self.session.cookies}:
+            self.get(self.natjecaj_url)
+
+        r = self.get(f"{Client.pay_url}?year={str(year)}", 1)
         data = json.loads(r.text)
         if not inplace:
             return data
@@ -184,7 +188,12 @@ or pass the data into the constructor'
             self.paydata = data
 
     def get(self, url: str, debug: bool = False):
-        return self.autoresolve(self.session.get(url), debug)
+        return self.autoresolve(
+            self.session.get(url,
+            headers=self.headers,
+            proxies=self.proxies,
+            verify=self.verify,
+        ), debug)
 
     @staticmethod
     def get_contract_pdf_link(data):
