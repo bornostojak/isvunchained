@@ -107,7 +107,7 @@ def process_options(current_option, data, client, args):
     export_data = [*data]
 
     if "raw" == current_option or "sirovo" == current_option:
-        print(data)
+        format_raw(data, args.pretty)
 
     Client.convert(export_data)
     if "pay" == current_option:
